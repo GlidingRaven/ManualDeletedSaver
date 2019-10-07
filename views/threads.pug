@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    - let len = threads.length
+    h1= title
+    h1= len
+    ul
+        each thread, num in threads
+            b= num
+            | #{thread.posts[0].comment}
+            | <br>
+
+
+
